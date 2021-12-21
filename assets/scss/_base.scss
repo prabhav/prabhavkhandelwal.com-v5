@@ -1,0 +1,215 @@
+body {
+	// background: green;
+	font: {
+		family: $font--body;
+		size: 100%;
+	}
+	// letter-spacing: -0.45px;
+	color: $gray;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	// overflow-x: hidden;
+
+	// background: #101010;
+	color: #fafafa;
+	// color: #d5d5d5;
+
+	background: black;
+	// color: white;
+
+	// background: #fafafa;
+	// color: #444;
+
+	// curtains.js
+
+	position: relative;
+	width: 100%;
+	// height: 100vh;
+	margin: 0;
+	overflow-x: hidden;
+
+	// @include small { font-size: 90%; }
+	// @include medium { font-size: 100%; }
+	// // @include large { font-size: 105%; }
+	// @include large { font-size: 80%; }
+
+	// cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAZCAMAAAD63NUrAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAFZJREFUeNqdzksKwDAIAFHH+x+6lIYOVPOhs5OHJnES/5UkYKEkU7xjijSIm50iFh4fAXgYDd/yumVVRSwsqq/nRA3xVK0oo06d5U6DpQZ7PV7lMxH7LkaQAbYFwryzAAAAAElFTkSuQmCC),auto;
+	cursor:url('../img/cursor.svg'),default;
+}
+
+a {
+	cursor: pointer;
+}
+
+// $padding--horizontal: 5%;
+// Padding for padded sections (.padded in _base.scss)
+$padding--horizontal: 7.5vw;
+// $padding--horizontal: 5vw;
+$padding--vertical: 4rem;
+$padding--vertical: 3rem;
+
+.section {
+  padding: $padding--vertical $padding--horizontal;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.padded--inner {
+	// padding: $padding--vertical $padding--horizontal;
+	padding: $padding--vertical 7vw;
+}
+
+.padded--outer {
+	// padding: $padding--vertical $padding--horizontal;
+	padding: $padding--vertical $padding--horizontal;
+}
+
+a {
+	// cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAZCAMAAAD63NUrAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAFZJREFUeNqdzksKwDAIAFHH+x+6lIYOVPOhs5OHJnES/5UkYKEkU7xjijSIm50iFh4fAXgYDd/yumVVRSwsqq/nRA3xVK0oo06d5U6DpQZ7PV7lMxH7LkaQAbYFwryzAAAAAElFTkSuQmCC),auto;
+	// cursor:url(../img/dog.gif),auto;
+}
+
+html {
+	font-size: 82.5%;
+
+	@include small { font-size: 85%; }
+	@include medium { font-size: 90%; }
+	// @include large { font-size: 100%; }
+	@include large { font-size: 92%; }
+}
+
+* {
+	transition: 0.25s;
+}
+
+h1 {
+	font: {
+		// family: $font--heading;
+		family: $font--heading;
+		size: 1.95rem;
+		weight: 700;
+	}
+	// color: $maroon;
+	line-height: 1.15;
+
+	margin-bottom: 1.25rem;
+}
+
+h2 {
+	font: {
+		// family: $font--heading;
+		family: $font--heading;
+		size: 1.65rem;
+		weight: 700;
+	}
+	// color: $maroon;
+	line-height: 1.15;
+
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font: {
+		family: $font--body;
+		size: 1.35rem;
+	}
+	margin-bottom: 1rem;
+
+	color: $yellow;
+	text-align: center;
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+}
+
+p, ul, ol, dl {
+	// hyphens: auto;
+	// word-break: break-word;
+
+	font-size: 1rem;
+	margin-bottom: 1.25rem;
+	line-height: 1.8;
+
+	@include medium {
+		font-size: 1.125rem;	
+	}
+
+	a {
+		text-decoration: underline;
+		color: $yellow;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	
+}
+
+// ul, ol {
+// 	font-size: 1.25rem;
+// 	font-size: inherit;
+// 	margin-bottom: 1rem;
+// 	line-height: 1.6;
+// }
+
+ul {
+	list-style-image: url(../img/round--white.svg);
+
+}
+
+p.lead {
+	font: {
+		family: $font--body;
+		size: 1.125rem;
+		style: italic;
+	}
+	// line-height: 1.4;
+	// color: $maroon;
+	color: $yellow;
+	margin-bottom: 1.5rem;
+
+	@include medium {
+		font-size: 1.25rem;
+	}
+}
+
+a.button {
+	border-radius: 10px;
+	padding: 1.25rem;
+	display: inline-block;
+	transition: 0.185s;
+	text-decoration: none;
+
+	background: $maroon;
+	font: {
+		family: $font--heading;
+		weight: 700;
+		size: 1.325rem;
+	}
+	color: $pink--light;
+	// box-shadow: 5px 5px 0 $pink--dark;
+	box-shadow: 5px 5px 0 rgba($maroon, 0.5);
+
+	&:hover, &:focus {
+		background: darken($maroon, 5%);
+		box-shadow: 5px 5px 0 darken($pink--dark, 5%);
+	}
+
+	&:active {
+		transform: translate(5px, 5px);
+		box-shadow: none;
+	}
+}
+
+// .post {
+// 	padding-bottom: 2rem;
+// 	margin-bottom: 2.5rem;
+// 	border-bottom: 1px dotted $maroon;
+// }
+
+hr {
+	width: 100%;
+	height: 1px;
+	background: rgba($yellow, 0.3);
+	margin-bottom: 1.25rem;
+}

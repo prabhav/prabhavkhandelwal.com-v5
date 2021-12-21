@@ -1,0 +1,301 @@
+// @font-face {
+//   font-family: 'Financier';
+//   src: url('fonts/financier-bold.woff') format('woff');
+//       //  url('sourcesanspro-it-webfont-webfont.woff') format('woff');
+//   // font-weight: normal;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'Financier';
+  src: url('fonts/italic/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..eot');
+  src: url('fonts/italic/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..eot?#iefix') format('embedded-opentype'),
+       url('fonts/italic/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..svg#CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse.') format('svg'),
+       url('fonts/italic/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..ttf') format('truetype'),
+       url('fonts/italic/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..woff') format('woff'),
+       url('fonts/italic/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Financier';
+  src: url('fonts/normal/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..eot');
+  src: url('fonts/normal/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..eot?#iefix') format('embedded-opentype'),
+       url('fonts/normal/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..svg#CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse.') format('svg'),
+       url('fonts/normal/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..ttf') format('truetype'),
+       url('fonts/normal/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..woff') format('woff'),
+       url('fonts/normal/CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+// $font--heading: 'Financier Display Test', serif;
+$font--heading: 'Financier', serif;
+$font--body: IBM Plex Mono, Pitch Sans Test, Letter Gothic Std, Calling Code, IBM Plex Mono, IBM Plex Sans, 'Franklin Gothic FS', monospace, sans-serif;
+$font--caption: 'Francois One', Franklin Gothic, sans-serif;
+$font--monospace: IBM Plex Mono, Space Mono, Roboto Mono, monospace;
+
+
+
+// Colors
+
+$blue: #00adef;
+$orange: #fa5c5c;
+// $yellow: #f1c40f;
+$yellow: #fc0;
+// $yellow: #bada55;
+// $yellow: #1DB954;
+// $yellow: #00adef;
+$red: #f22613;
+$green: #bada55;
+$yellow-fast: #fee900;
+$gray: #383838;
+
+$maroon: #7B0000;
+$pink: #FFE9E9;
+$pink--dark: #FFCBCB;
+$pink--light: #FFF9F9;
+
+$maroon: $gray;
+
+$small-width: 600px;
+$medium-width: 768px;
+$large-width: 1024px;
+$x-large-width: 1400px;
+
+@mixin small {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin x-large {
+  @media (min-width: #{$x-large-width}) {
+    @content;
+  }
+}
+
+// $padding--horizontal: 5%;
+// Padding for padded sections (.padded in _base.scss)
+// $padding--horizontal: 10vw;
+// // $padding--horizontal: 5vw;
+
+// $padding--vertical: 4rem;
+// $padding--vertical: 3rem;
+
+// .section {
+//   padding: $padding--vertical $padding--horizontal;
+//   max-width: 1600px;
+//   margin: 0 auto;
+// }
+
+// .padded--inner {
+// 	// padding: $padding--vertical $padding--horizontal;
+// 	padding: $padding--vertical 7vw;
+// }
+
+// .padded--outer {
+// 	// padding: $padding--vertical $padding--horizontal;
+// 	padding: $padding--vertical $padding--horizontal;
+// }
+
+.center { text-align: center; margin: 0 auto; }
+
+// Animations
+
+@import "https://raw.githubusercontent.com/daneden/animate.css/master/animate.min.css";
+
+@keyframes spin {
+	// 0% { transform: rotate(0); }
+  // 100% { transform: rotate(359deg); }
+  
+  0% { transform: rotate(0); }
+	100% { transform: rotate(359deg); }
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes rotate-bg {
+  0% { background-position-x: 0; }
+  50% { background-position-x: 100%; }
+  100% { background-position-x: 200%; }
+}
+
+@keyframes rotate {
+  0% { transform: sclae(0); }
+  50% { transform: sclae(180); }
+  100% { transform: sclae(360); }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0.5; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+%full-bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+    // background-attachment: fixed;
+}
+
+%word-break {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+::selection {
+  // background: rgba($maroon, 0.5);
+  background: #fc0;
+	color: white;
+}
+
+::-moz-selection {
+  background: #fc0;
+
+	// background: rgba($maroon, 0.5);
+	// background: $red;
+	color: white;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:focus {
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+b { font-weight: normal; }
+
+s { text-decoration: line-through; }
+
+i { font-style: normal; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+u { text-decoration: underline; }
+
+img { max-width: 100%; }
+
+small {
+    font-size: 90%;
+}
+
+// Form Reset
+
+input[placeholder],
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="submit"],
+	textarea,
+	select,
+	option {
+	  color: white;
+	  padding: 1rem;
+	  border-radius: 0;
+	  background: rgba(white, 0);
+	  outline-offset: 0;
+	  max-width: 100%;
+	  font: {
+	  	family: $font--body;
+	  }
+}
+
+input[type="submit"] {
+	font: {
+		family: $font--body;
+		weight: bold;
+	}
+	text-transform: uppercase;
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	// background: white;
+	// color: black;
+}

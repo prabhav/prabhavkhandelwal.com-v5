@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse.';
+  src: url('CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..eot');
+  src: url('CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..eot?#iefix') format('embedded-opentype'),
+       url('CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..svg#CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse.') format('svg'),
+       url('CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..ttf') format('truetype'),
+       url('CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..woff') format('woff'),
+       url('CopyrightKlimTypeFoundry-Fortestingonly.Notforcommercialuse..woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
